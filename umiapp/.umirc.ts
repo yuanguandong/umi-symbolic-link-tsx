@@ -6,7 +6,7 @@ export default defineConfig({
   },
   routes: [
     { path: '/', component: '@/pages/index' },
-    { path: '/', component: '@/pages/symboliclinkpage' },
+    { path: '/symboliclinkpage', component: '@/pages/symboliclinkpage' },
   ],
   fastRefresh: {},
 });
