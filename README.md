@@ -5,3 +5,7 @@
 
 ## 2、运行项目
 umiapp下运行项目
+
+## 3、验证
+http://localhost:8000/symboliclinkpage
+umi2 可以编译page下软连接的tsx

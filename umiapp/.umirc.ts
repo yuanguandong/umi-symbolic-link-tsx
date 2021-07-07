@@ -1,12 +1,17 @@
-import { defineConfig } from 'umi';
 
-export default defineConfig({
-  nodeModulesTransform: {
-    type: 'none',
-  },
+export default {
   routes: [
-    { path: '/', component: '@/pages/index' },
-    { path: '/symboliclinkpage', component: '@/pages/symboliclinkpage' },
+    { path: '/', component: './index' },
+    { path: '/symboliclinkpage', component: './symboliclinkpage' },
   ],
-  fastRefresh: {},
-});
+  plugins:[
+    [
+      'umi-plugin-react',
+      {
+        dva: {
+          hmr: true,
+        }
+      }
+    ]
+  ]
+};
