@@ -1,6 +1,7 @@
-import { defineConfig } from 'umi';
+import path from 'path';
+import chainWebpack from './webpackconfig';
 
-export default defineConfig({
+export default {
   nodeModulesTransform: {
     type: 'none',
   },
@@ -9,4 +10,8 @@ export default defineConfig({
     { path: '/symboliclinkpage', component: '@/pages/symboliclinkpage' },
   ],
   fastRefresh: {},
-});
+  extraBabelIncludes: [
+    path.join(__dirname, '../symboliclinkpage'),
+  ],
+  chainWebpack,
+};
